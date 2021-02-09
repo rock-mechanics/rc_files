@@ -82,7 +82,7 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 set autoindent
 set hls
 nnoremap oo A<Cr><Esc>
-nnoremap gw A<Cr>```=<Cr><Cr>```<Esc>ki
+nnoremap gw A<Cr><Cr>```=<Cr><Cr>```<Esc>ki
 
 set ts=4 sts=4 sw=4 noexpandtab
 
@@ -96,3 +96,5 @@ set listchars=tab:▸\ ,eol:¬
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 set list
+
+nnoremap <Space> :silent! nohls<cr>
