@@ -98,3 +98,22 @@ highlight SpecialKey guifg=#4a4a59
 set list
 
 nnoremap <Space> :silent! nohls<cr>
+
+"disable search from end of file to beginning of file.
+"disable search from beginning of file to end of file.
+set nowrapscan
+
+"visual star plug in
+"it will search the selection in visual mode if you press
+"* or #
+"default behavior always search the word under the cursor
+"which is less useful.
+xnoremap * :<C-u>call <SID>VSetSearch()<CR>/<C-R>=@/<CR><CR>
+xnoremap # :<C-u>call <SID>VSetSearch()<CR>?<C-R>=@/<CR><CR>
+
+function! s:VSetSearch()
+  let temp = @s
+  norm! gv"sy
+  let @/ = '\V' . substitute(escape(@s, '/\'), '\n', '\\n', 'g')
+  let @s = temp
+endfunction
