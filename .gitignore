@@ -6,6 +6,7 @@
 !.bashrc
 !.vimrc
 !_vimrc
+!.tldrrc
 
 #in case you want to include file in sub directory
 #!*/a/b/file1.txt
