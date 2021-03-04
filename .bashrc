@@ -123,3 +123,24 @@ JAVA_HOME=/usr/local/jdk-15.0.2
 CLASSPATH=.:$JAVA_HOME/bin.tools.jar
 PATH=$JAVA_HOME/bin:$PATH
 export JAVA_HOME CLASSPATH PATH
+
+# set language to english
+export LANG=en_US.UTF-8
+export LANGUAGE=en
+
+# use nvim as the default editor
+export VISUAL=nvim
+alias vim=nvim
+alias vi=nvim
+
+# fzf path variable 
+PATH=$PATH:~/.config/nvim/pack/minpac/start/fzf/bin
+
+# linux command line book recommends
+umask 0002
+alias l.='ls -d .[^.]* --color=auto'
+alias ll='ls -l --color=auto'
+alias la='ls -lA --color=auto'
+
+# change the prompt of the terminal
+PS1="\[\033[35m\]\u \[\033[33m\]\w\[\033[36m\]`__git_ps1`\n\[\033[1;34m\]$ \[\033[0m\]"  
