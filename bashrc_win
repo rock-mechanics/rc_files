@@ -87,10 +87,9 @@ fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
 # some more ls aliases
-#alias ll='ls -l'
-#alias la='ls -A'
+alias ll='ls -l'
+alias la='ls -A'
 #alias l='ls -CF'
 
 # Alias definitions.
@@ -128,19 +127,31 @@ export JAVA_HOME CLASSPATH PATH
 export LANG=en_US.UTF-8
 export LANGUAGE=en
 
-# use nvim as the default editor
-export VISUAL=nvim
-alias vim=nvim
-alias vi=nvim
-
-# fzf path variable 
-PATH=$PATH:~/.config/nvim/pack/minpac/start/fzf/bin
-
 # linux command line book recommends
 umask 0002
-alias l.='ls -d .[^.]* --color=auto'
-alias ll='ls -l --color=auto'
-alias la='ls -lA --color=auto'
 
+source ~/.git-prompt.sh
+
+#git branch function to get the branch name of current git repo.
+
+#gb_clean() {
+#        gb | sed 's/()//'
+#}
+#
 # change the prompt of the terminal
-PS1="\[\033[35m\]\u \[\033[33m\]\w\[\033[36m\]`__git_ps1`\n\[\033[1;34m\]$ \[\033[0m\]"  
+#PS1='\[\033[35m\]\u \[\033[33m\]\w \[\033[36m\]__git_ps1\n\[\033[1;34m\]$ \[\033[0m\]'
+
+# default ps1 setting for git.
+# version 1
+#PS1='\u@\h \w $(__git_ps1 " (%s)") \[\033[33m\]\$ '
+
+# version 2
+#export PS1='\[\033[35m\]\u \[\033[33m\]\w \[\033[36m\]$(__git_ps1 " (%s)") \[\033[1;34m\]\$\[\033[0m\] '
+
+# version 3 : finllay working
+new_line() {
+    printf "\n\033[1;34m\$\033[0m "
+}
+
+export PS1='\[\033[35m\]\u@\h \[\033[33m\]\w \[\033[36m\]$(__git_ps1 " (%s)")$(new_line)'
+

@@ -3,10 +3,12 @@
 
 #but not these files
 !.gitignore
-!.bashrc
-!.vimrc
-!_vimrc
-!.tldrrc
+!bashrc
+!bashrc_win
+!nvimrc
+!vimrc
+!tldrrc
+!vim
 
 #in case you want to include file in sub directory
 #!*/a/b/file1.txt
