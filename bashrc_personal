@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+
+#In Linux, we are using nvim 
+alias vim='nvim'
