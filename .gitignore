@@ -1,16 +1,6 @@
 #ignore everything
-*
 
 #but not these files
-!.gitignore
-!bashrc
-!bashrc_win
-!nvimrc
-!vimrc
-!tldrrc
-!vim
-!tmux.conf
-!tmux
 
 #in case you want to include file in sub directory
 #!*/a/b/file1.txt

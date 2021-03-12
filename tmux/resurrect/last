@@ -1,0 +1,11 @@
+pane	dev	1	:editor	1	:*	1	:/home/704021/Documents/vim-notes	0	vim	:
+pane	dev	1	:editor	1	:*	2	:/home/704021/Documents/vim-notes	1	vim	:
+pane	dev	1	:editor	1	:*	3	:/home/704021/.tmux/plugins	0	bash	:
+pane	dev	2	:console	0	:-	1	:/home/704021/Documents/vim-notes	1	bash	:
+pane	newsession	1	:bash	1	:*	1	:/home/704021/Documents/config_env	1	bash	:
+pane	newsession	4	:bash	0	:-	1	:/home/704021/Documents/config_env	1	bash	:
+window	dev	1	1	:*	378c,158x45,0,0{83x45,0,0,0,74x45,84,0[74x32,84,0,1,74x12,84,33,12]}
+window	dev	2	0	:-	c3bf,158x45,0,0,2
+window	newsession	1	1	:*	c3c5,158x45,0,0,8
+window	newsession	4	0	:-	c3c6,158x45,0,0,9
+state	dev	
