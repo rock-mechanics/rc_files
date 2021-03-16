@@ -150,8 +150,11 @@ source ~/.git-prompt.sh
 #export PS1='\[\033[35m\]\u \[\033[33m\]\w \[\033[36m\]$(__git_ps1 " (%s)") \[\033[1;34m\]\$\[\033[0m\] '
 
 # version 3 : finllay working
+# \001 = \[
+# \002 = \]
+# somehow this magically work, and bash intepret the length of the bash prompt correctly this time
 new_line() {
-	printf "\n\033[1;34m\$\033[0m "
+	printf "\n\001\033[1;34m\002\$\001\033[0m\002 "
 }
 
 export PS1='\[\033[35m\]\u \[\033[33m\]\w \[\033[36m\]$(__git_ps1 " (%s)")$(new_line)'
