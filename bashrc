@@ -131,28 +131,10 @@ export LANGUAGE=en
 # linux command line book recommends
 umask 0002
 
-source ~/.git-prompt.sh
+if test -f ~/.git-prompt.sh; then
+	source ~/.git-prompt.sh
+fi
 
-#git branch function to get the branch name of current git repo.
-
-#gb_clean() {
-#        gb | sed 's/()//'
-#}
-#
-# change the prompt of the terminal
-#PS1='\[\033[35m\]\u \[\033[33m\]\w \[\033[36m\]__git_ps1\n\[\033[1;34m\]$ \[\033[0m\]'
-
-# default ps1 setting for git.
-# version 1
-#PS1='\u@\h \w $(__git_ps1 " (%s)") \[\033[33m\]\$ '
-
-# version 2
-#export PS1='\[\033[35m\]\u \[\033[33m\]\w \[\033[36m\]$(__git_ps1 " (%s)") \[\033[1;34m\]\$\[\033[0m\] '
-
-# version 3 : finllay working
-# \001 = \[
-# \002 = \]
-# somehow this magically work, and bash intepret the length of the bash prompt correctly this time
 new_line() {
 	printf "\n\001\033[1;34m\002\$\001\033[0m\002 "
 }

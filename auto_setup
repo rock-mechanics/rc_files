@@ -1,0 +1,37 @@
+#!/usr/bin/bash
+
+#check absolute path
+p=$(pwd)
+echo $p
+
+if test -f bashrc; then
+	echo "bashrc file found"
+	if test -f ~/.bashrc; then
+		mv ~/.bashrc ~/bashrc.bak
+	fi
+	ln -s $p/bashrc ~/.bashrc
+fi
+
+if test -f tmux.conf; then
+	echo "tmux file found"
+	if test -f ~/.tmux.conf; then
+		mv ~/.tmux.conf ~/tmux.conf.bak
+	fi
+	ln -s $p/tmux.conf ~/.tmux.conf
+fi
+
+if test -d vim; then
+	echo "vim folder found"
+	if test -d ~/.vim;then
+		mv ~/.vim ~/vim.bak
+	fi
+	ln -s $p/vim ~/.vim
+fi
+
+if test -z $(ls ./vim/pack/minpac/opt); then
+	echo "minpac is not installed"
+else
+	echo "minpac folder not empty"
+fi
+
+

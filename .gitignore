@@ -1,1 +1,4 @@
 .*.swp
+vim/pack/minpac/opt/*
+vim/pack/minpac/start/*
+
