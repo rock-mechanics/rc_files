@@ -125,6 +125,8 @@ call minpac#add('tpope/vim-unimpaired')
 call minpac#add('tpope/vim-projectionist')
 call minpac#add('tpope/vim-surround')
 call minpac#add('tpope/vim-dispatch')
+call minpac#add('tpope/vim-commentary')
+call minpac#add('jiangmiao/auto-pairs')
 call minpac#add('junegunn/fzf')
 call minpac#add('tpope/vim-scriptease', {'type':'opt'})
 
